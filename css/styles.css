@@ -1,20 +1,35 @@
 body {
   background-color: #ffffff;
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+@font-face {
+  font-family: "bebasneue";
+  src:
+    url("../fonts/bebasneue-regular-webfont.woff2") format("woff2");
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
     color: #000000;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:1.2em;
+    font-family: bebasneue;
+    font-size:2.4em;
     font-kerning: auto;
-    margin-top: 0.7em;
-    margin-left: 0.7em;
+    text-align: center;
+    margin-right: 2em;
 }
 
-.bio {
+p {
     color: #000000;
-    @font-face: "../fonts/bebasneue-regular-webfont.woff2";
-    font-size:1.2em;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:1.1em;
     font-kerning: auto;
     line-height: 1.7em;
     margin-top: 0.7em;
@@ -23,14 +38,13 @@ h1 {
 }
 
 /* Navigation bar */
-    .navbar {
-    border-radius: 0.3em;
+  nav {
+    float: right;
     background-color: #ffffff;
     overflow: hidden;
-    }
+  }
 
-    /* Link style */
-    .navbar a {
+  nav a {
     float: right;
     color: #000000;
     font-family:Arial, Helvetica, sans-serif;
@@ -38,16 +52,15 @@ h1 {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 0.95em;
-    }
+  }
 
-    /* Link style on hover */
-    .navbar a:hover {
-    color: #000000;
-    text-shadow: 0.03em 0.01em #000000;
-    }
+  nav a:hover {
+      color: #000000;
+      text-shadow: 0.03em 0.01em #000000;
+      }
 
-    /* Link style on active */
-    .navbar a.active {
-    background-color: #000000;
-    color: white;
-    }
+  nav a.active {
+      background-color: #000000;
+      color: white;
+      border-radius: 0.3em;
+      }
