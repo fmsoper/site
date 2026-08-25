@@ -2,7 +2,7 @@
 
 const USERNAME = 'fmsoper';
 const REPO = 'site';
-const FOLDER = 'images/fulls';
+const FOLDER = 'images/thumbs';
 
 fetch(`https://api.github.com/repos/${USERNAME}/${REPO}/contents/${FOLDER}`)
   .then(res => res.json())
