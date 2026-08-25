@@ -3,8 +3,8 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const inputDir = './images/fulls';
-const outputDir = './images/thumbs';
+const inputDir = './images/full';
+const outputDir = './images/compressed';
 
 fs.mkdirSync(outputDir, { recursive: true });
 
