@@ -66,10 +66,21 @@ p {
       border-radius: 0.3em;
       }
 
+/* Main */
+  main {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  main.loaded {
+    opacity: 1;
+  }
+
+
 /* Home */
   .bio-section {
     display: flex;
-    align-items: top;
+    align-items: stretch;
     gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
@@ -78,15 +89,47 @@ p {
 
   .bio-text {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 16px;
+    align-self: flex-end;
+  }
+
+  .links img {
+    width: 50px;
+    height: 50px;
+    display: block;
   }
 
   .profile-photo {
     width: 400px;
+    max-width: 40vw;
     height: auto;
     border-radius: 0.5em;
     flex-shrink: 0;
+    object-fit: cover;
   }
 
+  @media (max-width: 700px) {
+    .bio-section {
+      flex-direction: column;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .links {
+      align-self: flex-start;
+    }
+  }
 
 /* Photography */
   #gallery {
@@ -95,6 +138,12 @@ p {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  #gallery.loaded {
+    opacity: 1;
   }
 
   #gallery img {
@@ -104,10 +153,12 @@ p {
     margin-bottom: 16px;
     cursor: pointer;
     break-inside: avoid;
+    opacity: 0;
+    transition: opacity 0.5s ease;
   }
 
-  #gallery img {
-    cursor: pointer;
+  #gallery img.loaded {
+    opacity: 1;
   }
 
   #lightbox {
