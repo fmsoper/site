@@ -9,7 +9,10 @@
         <link rel="stylesheet" href="../css/styles.css">
 
         <title>Contact | FM Soper</title>
-        
+
+        <!-- Email obfuscation script -->
+        <script defer src="../js/contact.js"></script>
+
     </head>
 
     <body>
@@ -20,20 +23,41 @@
             <nav>
                 <a href="../index.html">Home</a>
                 <a href="photography.html">Photography</a>
-                <a href="projects.html">Projects</a>
                 <a class="active" href="contact.html">Contact</a>
             </nav>
         </header>
 
         <!-- Main -->
-        <p> You can contact me here</p>
+        <main class="content">
+            <p>Feel free to get in touch.</p>
 
+            <ul class="contact-list">
+                <li>
+                    <a id="email-link" href="#">
+                        <img class="icon" src="../assets/email.png" alt="Email">
+                        <span id="email-text">loading&hellip;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/frederick-soper/">
+                        <img class="icon" src="../assets/linkedin.png" alt="LinkedIn">
+                        <span>linkedin.com/in/frederick-soper</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/fmsoper">
+                        <img class="icon" src="../assets/github.png" alt="GitHub">
+                        <span>github.com/fmsoper</span>
+                    </a>
+                </li>
+            </ul>
 
-
-
-
-
-
+            <script>
+                window.addEventListener('load', () => {
+                    document.querySelector('main').classList.add('loaded');
+                });
+            </script>
+        </main>
 
     </body>
 

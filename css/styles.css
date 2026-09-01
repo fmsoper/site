@@ -1,15 +1,10 @@
-body {
-  background-color: #ffffff;
-  margin-left: 4em;
-  margin-right: 4em;
-}
-
 @font-face {
   font-family: "bebasneue";
   src:
     url("../fonts/bebasneue-regular-webfont.woff2") format("woff2");
 }
 
+/* Header */
 header {
   display: flex;
   width: 100%;
@@ -17,27 +12,7 @@ header {
   align-items: center;
 }
 
-h1 {
-    color: #000000;
-    font-family: bebasneue;
-    font-size:2.4em;
-    font-kerning: auto;
-    text-align: center;
-    margin-right: 2em;
-}
-
-p {
-    color: #000000;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:1.1em;
-    font-kerning: auto;
-    line-height: 1.7em;
-    margin-top: 0.7em;
-    margin-left: 0.7em;
-    max-width: 60em
-}
-
-/* Navigation bar */
+  /* Navigation bar */
   nav {
     display: flex;
     flex-wrap: wrap;
@@ -64,9 +39,16 @@ p {
       background-color: #000000;
       color: white;
       border-radius: 0.3em;
-      }
+  }
 
-/* Main */
+
+/* Body */
+  body {
+    background-color: #ffffff;
+    margin-left: 4em;
+    margin-right: 4em;
+  }
+
   main {
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -76,15 +58,45 @@ p {
     opacity: 1;
   }
 
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  h1 {
+      color: #000000;
+      font-family: bebasneue;
+      font-size:2.4em;
+      font-kerning: auto;
+      text-align: center;
+      margin-right: 2em;
+  }
+
+  p {
+      color: #000000;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-size:1.1em;
+      font-kerning: auto;
+      line-height: 1.7em;
+      margin-top: 0.7em;
+      margin-left: 0.7em;
+      max-width: 60em
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #555555;
+  }
 
 /* Home */
   .bio-section {
     display: flex;
     align-items: stretch;
     gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px 20px;
   }
 
   .bio-text {
@@ -96,15 +108,19 @@ p {
   .links {
     display: flex;
     gap: 8px;
-    margin-top: auto;
-    padding-top: 16px;
-    align-self: flex-end;
+    margin-top: 24px;
   }
 
   .links img {
     width: 50px;
     height: 50px;
     display: block;
+  }
+
+  .bio-text .links {
+    margin-top: auto;
+    padding-top: 16px;
+    align-self: flex-end;
   }
 
   .profile-photo {
@@ -186,3 +202,28 @@ p {
     border-radius: 4px;
   }
 
+/* Contact */
+  .contact-list {
+    align-items: left;
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-list a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  .contact-list .icon {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
