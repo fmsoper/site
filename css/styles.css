@@ -4,6 +4,12 @@
     url("../fonts/bebasneue-regular-webfont.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "libreBaskerville";
+  src:
+    url("../fonts/LibreBaskerville-VariableFont_wght.woff2") format("woff2");
+}
+
 /* Header */
 header {
   display: flex;
@@ -73,6 +79,14 @@ header {
       margin-right: 2em;
   }
 
+  h2 {
+      color: #000000;
+      font-family: libreBaskerville;
+      font-size: 2.2em;
+      margin-top: 0;
+      margin-left: 0.7rem;
+  }
+
   p {
       color: #000000;
       font-family:Georgia, 'Times New Roman', Times, serif;
@@ -80,9 +94,10 @@ header {
       font-kerning: auto;
       line-height: 1.7em;
       margin-top: 0.7em;
-      margin-left: 0.7em;
+      margin-left: 0.7rem;
       max-width: 60em
   }
+
   a {
     color: inherit;
     text-decoration: underline;
@@ -222,7 +237,7 @@ header {
   }
 
   .contact-list .icon {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
   }
