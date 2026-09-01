@@ -204,7 +204,6 @@ header {
 
 /* Contact */
   .contact-list {
-    align-items: left;
     list-style: none;
     margin: 24px 0 0;
     padding: 0 0 0 24px;

@@ -1,2 +1,4 @@
 node_modules/
 images/full/
+.DS_Store
+**/.DS_Store
