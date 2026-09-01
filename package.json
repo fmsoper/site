@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "resize-images": "node js/resize-images.js"
+  },
   "dependencies": {
     "sharp": "^0.35.3"
   }
