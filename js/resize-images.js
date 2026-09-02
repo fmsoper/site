@@ -29,6 +29,7 @@ async function main() {
       outputNames.push(outputName);
 
       return sharp(path.join(inputDir, file))
+        .rotate()
         .resize({ width: 1600, withoutEnlargement: true })
         .jpeg({ quality: 80 })
         .toFile(path.join(outputDir, outputName));
