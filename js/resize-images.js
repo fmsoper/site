@@ -19,7 +19,8 @@ async function main() {
   const files = fs
     .readdirSync(inputDir)
     .filter(file => /\.(jpe?g|png|tiff?)$/i.test(file))
-    .sort();
+    .sort()
+    .reverse();
 
   const outputNames = [];
 
@@ -36,7 +37,7 @@ async function main() {
     })
   );
 
-  fs.writeFileSync(manifestPath, JSON.stringify(outputNames, null, 2) + '\n');
+  fs.writeFileSync(manifestPath, JSON.stringify([...new Set(outputNames)], null, 2) + '\n');
   console.log(`Resized ${outputNames.length} image(s) and wrote ${manifestPath}`);
 }
 
