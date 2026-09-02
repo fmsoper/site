@@ -18,20 +18,25 @@ async function main() {
 
   const files = fs
     .readdirSync(inputDir)
-    .filter(file => /\.(jpe?g|png)$/i.test(file))
+    .filter(file => /\.(jpe?g|png|tiff?)$/i.test(file))
     .sort();
 
+  const outputNames = [];
+
   await Promise.all(
-    files.map(file =>
-      sharp(path.join(inputDir, file))
+    files.map(file => {
+      const outputName = file.replace(/\.(jpe?g|png|tiff?)$/i, '.jpg');
+      outputNames.push(outputName);
+
+      return sharp(path.join(inputDir, file))
         .resize({ width: 1600, withoutEnlargement: true })
         .jpeg({ quality: 80 })
-        .toFile(path.join(outputDir, file))
-    )
+        .toFile(path.join(outputDir, outputName));
+    })
   );
 
-  fs.writeFileSync(manifestPath, JSON.stringify(files, null, 2) + '\n');
-  console.log(`Resized ${files.length} image(s) and wrote ${manifestPath}`);
+  fs.writeFileSync(manifestPath, JSON.stringify(outputNames, null, 2) + '\n');
+  console.log(`Resized ${outputNames.length} image(s) and wrote ${manifestPath}`);
 }
 
 main().catch(err => {
