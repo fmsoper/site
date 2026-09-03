@@ -1,4 +1,4 @@
-# F M Soper
+# fmsoper.com
 
 A personal site to host my photography and practice HTML/CSS/JS from scratch, with no frameworks.
 
