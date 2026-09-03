@@ -148,20 +148,6 @@ header {
     object-fit: cover;
   }
 
-  @media (max-width: 700px) {
-    .bio-section {
-      flex-direction: column;
-    }
-
-    .profile-photo {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .links {
-      align-self: flex-start;
-    }
-  }
 
 /* Photography */
   #gallery {
@@ -237,8 +223,38 @@ header {
     font-size: 1.1em;
   }
 
+  .contact-list a span {
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
   .contact-list .icon {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
   }
+
+
+@media (max-width: 700px) {
+    body {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+
+    .content {
+      padding: 24px 12px;
+    }
+
+    .bio-section {
+      flex-direction: column;
+    }
+
+    .profile-photo {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .links {
+      align-self: flex-start;
+    }
+}
